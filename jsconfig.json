@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    // jsconfig.json和tsconfig.js这两个文件vscode有做特殊处理，所以其中可以写注释
+    // "target": "es5", 
+    "module": "esnext",
+    "baseUrl": "./",
+    "moduleResolution": "node",
+    "jsx": "preserve", // 增加对template中的智能提示
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ]
+  },
+  // "vueCompilerOptions": {
+  // experimentalDisableTemplateSupport: 禁用模板支持
+  //   "experimentalDisableTemplateSupport": true
+  // }
+}
