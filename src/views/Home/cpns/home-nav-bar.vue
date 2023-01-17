@@ -1,6 +1,6 @@
 <template>
   <div class="nav-bar">
-    <div class="title">弘源旅途</div>
+    <div class="title">奈斯兔旅行</div>
   </div>
 </template>
 

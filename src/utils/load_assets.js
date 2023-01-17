@@ -1,4 +1,4 @@
-export const getAssetUrl = (image) => {
+export const getAssetURL = (image) => {
   // new URL(url, import.meta.url)
   // 参数一: 相对路径
   // 参数二：当前模块(文件)所在路径

@@ -1,12 +1,12 @@
-import hyRequest from "../request";
+import myRequest from "../request";
 
 export function getSearchConditions() {
-  return hyRequest.get({
+  return myRequest.get({
     url: "/search/top",
   });
 }
 export function getSearchHouse() {
-  return hyRequest.get({
+  return myRequest.get({
     url: "/search/result",
   });
 }
@@ -18,7 +18,7 @@ const _fasTraceId = "1657957399023KiYJenCT_6Th0R8QmkS3QDMD3wNhFaJsfn97x";
 
 // 发起网络请求
 export function getGuessulike() {
-  return hyRequest.post({
+  return myRequest.post({
     url:
       TSET_URL +
       `/bnbapp-node-h5/h5/suggest/guessulike/bnb?_apitsp=${_apitsp}&_fasTraceId=${_fasTraceId}
@@ -29,7 +29,7 @@ export function getGuessulike() {
 }
 
 export function keywordsearchsuggest(keyword) {
-  return hyRequest.post({
+  return myRequest.post({
     url:
       TSET_URL +
       `/bnbapp-node-h5/h5/keyword/keywordsearchsuggest/bnb?_apitsp=${_apitsp}&_fasTraceId=${_fasTraceId}

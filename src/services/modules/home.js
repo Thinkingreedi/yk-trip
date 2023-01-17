@@ -1,20 +1,20 @@
-import hyRequest from '../request'
+import myRequest from '../request'
 
 export function getHomeHotSuggests() {
-  return hyRequest.get({ 
-    url: "/home/hotSuggests" 
+  return myRequest.get({
+    url: "/home/hotSuggests"
   })
 }
 
 export function getHomeCategories() {
-  return hyRequest.get({ 
-    url: "/home/categories" 
+  return myRequest.get({
+    url: "/home/categories"
   })
 }
 
 export function getHomeHouseList(currentPage) {
-  return hyRequest.get({ 
-    url: "/home/houselist" ,
+  return myRequest.get({
+    url: "/home/houselist",
     params: {
       page: currentPage
     }

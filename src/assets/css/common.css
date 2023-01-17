@@ -19,5 +19,6 @@ body {
   z-index: 9;
   height: 100vh;
   background-color: #fff;
+  /* 在视口里进行滚动而不是页面进行滚动 */
   overflow-y: auto;
 }

@@ -1,8 +1,8 @@
-import hyRequest from '../request'
+import myRequest from '../request'
 
 export function getDetailInfos(houseId) {
-  return hyRequest.get({ 
-    url: "/detail/infos" ,
+  return myRequest.get({
+    url: "/detail/infos",
     params: {
       houseId
     }

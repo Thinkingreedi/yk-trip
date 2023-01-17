@@ -4,22 +4,22 @@ import axios from 'axios'
 import { BASE_URL, TIMEOUT } from './config'
 const mainStore = useMainStore()
 // 网络请求库的封装
-class HYRequest {
-  constructor(baseURL, timeout=10000) {
+class MYRequest {
+  constructor(baseURL, timeout = 10000) {
     this.instance = axios.create({
       baseURL,
       timeout
     })
     this.instance.interceptors.request.use(config => {
-       mainStore.isLoading = true
+      mainStore.isLoading = true
       return config
-    }, err=>{
+    }, err => {
       return err
     })
-    this.instance.interceptors.response.use(res =>{
+    this.instance.interceptors.response.use(res => {
       mainStore.isLoading = false
       return res
-    },err=>{
+    }, err => {
       mainStore.isLoading = false
       return err
     })
@@ -44,6 +44,6 @@ class HYRequest {
   }
 }
 
-export default new HYRequest(BASE_URL, TIMEOUT)
+export default new MYRequest(BASE_URL, TIMEOUT)
 
 
