@@ -58,6 +58,7 @@ const props = defineProps({
     .location {
       display: flex;
       align-items: center;
+
       img {
         width: 12px;
         height: 12px;
@@ -87,6 +88,7 @@ const props = defineProps({
       align-items: flex-start;
 
       margin: 8px 0;
+
       .new {
         color: #ff9645;
         font-size: 14px;
@@ -100,7 +102,7 @@ const props = defineProps({
       }
 
       .tip {
-        background-image: linear-gradient(270deg,#f66,#ff9f9f);
+        background-image: linear-gradient(270deg, #f66, #ff9f9f);
         color: #fff;
         padding: 0 6px;
         border-radius: 8px;

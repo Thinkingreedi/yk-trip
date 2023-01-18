@@ -1,32 +1,35 @@
 <template>
-    <div class="categories">
-        <template v-for="(item,index) in categories" :key="item.id">
-          <div class="item">
-            <img :src="item.pictureUrl" alt="" srcset="">
-            <div class="text">{{item.title}}</div>
-          </div>
-        </template>
-    </div>
+  <div class="categories">
+    <template v-for="(item, index) in categories" :key="item.id">
+      <div class="item">
+        <img :src="item.pictureUrl" alt="" srcset="">
+        <div class="text">{{ item.title }}</div>
+      </div>
+    </template>
+  </div>
 </template>
 
 <script setup>
 import useHomeStore from '@/stores/modules/home';
 import { storeToRefs } from 'pinia';
 const homeStore = useHomeStore()
-const { categories } =storeToRefs(homeStore)
+const { categories } = storeToRefs(homeStore)
 </script>
 
 <style lang="less" scoped>
-.categories{
+.categories {
   display: flex;
   overflow: auto;
   height: 80px;
   padding: 0 10px;
   margin-top: 8px;
-  &::-webkit-scrollbar{
+
+  // css隐藏滚动条
+  &::-webkit-scrollbar {
     display: none;
   }
-  .item{
+
+  .item {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,11 +37,13 @@ const { categories } =storeToRefs(homeStore)
     width: 70px;
     text-align: center;
     flex-shrink: 0;
-    img{
+
+    img {
       width: 32px;
       height: 32px;
     }
-    .text{
+
+    .text {
       font-size: 12px;
       margin-top: 8px;
     }

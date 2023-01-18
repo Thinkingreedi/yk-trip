@@ -1,6 +1,7 @@
 import { onMounted, onUnmounted, ref } from 'vue'
 // 引入节流函数
 import { throttle } from 'underscore'
+
 export default function useScroll(elRef) {
   let el = window
   const isReachBotton = ref(false)
@@ -22,17 +23,19 @@ export default function useScroll(elRef) {
       scrollHeight.value = el.scrollHeight
     }
 
-    //console.log(clientHeight,scrollTop,scrollHeight);
     if (clientHeight.value + scrollTop.value >= scrollHeight.value) {
       isReachBotton.value = true
     }
   }, 100)
+
   onMounted(() => {
     if (elRef) el = elRef.value
     el.addEventListener('scroll', scrollListenerHandler)
   })
+
   onUnmounted(() => {
     el.removeEventListener('scroll', scrollListenerHandler)
   })
+
   return { isReachBotton, clientHeight, scrollTop, scrollHeight }
 }

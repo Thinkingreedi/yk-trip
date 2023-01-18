@@ -20,26 +20,25 @@
 </template>
 
 <script setup>
- import useMainStore from '@/stores/modules/main';
- import { formatMonthDay } from '@/utils/format_date';
- import { computed } from '@vue/reactivity';
- import { storeToRefs } from 'pinia';
+import useMainStore from '@/stores/modules/main';
+import { formatMonthDay } from '@/utils/format_date';
+import { computed } from '@vue/reactivity';
+import { storeToRefs } from 'pinia';
 
- const mainStore = useMainStore()
- const { startDate, endDate } = storeToRefs(mainStore)
- const startDateStr = computed(() => formatMonthDay(startDate.value, "MM.DD"))
- const endDateStr = computed(() => formatMonthDay(endDate.value, "MM.DD"))
+const mainStore = useMainStore()
+const { startDate, endDate } = storeToRefs(mainStore)
+const startDateStr = computed(() => formatMonthDay(startDate.value, "MM.DD"))
+const endDateStr = computed(() => formatMonthDay(endDate.value, "MM.DD"))
 </script>
 
 <style lang="less" scoped>
-
 .search {
   display: flex;
   flex-direction: row;
   align-items: center;
 
   height: 45px;
-  line-height:45px;
+  line-height: 45px;
 
   padding: 0 10px;
   font-size: 14px;
@@ -71,6 +70,7 @@
       align-items: center;
       line-height: normal;
       font-size: 10px;
+
       .name {
         font-size: 10px;
       }
@@ -140,5 +140,4 @@
     background-size: 207px 192px;
   }
 }
-
 </style>
