@@ -1,7 +1,9 @@
 <template>
   <div class="detail top-page" ref="detailRef">
-    <tab-control v-if="showTabControl" class="tabs" :titles="names" @tabItemClick="tabClick" ref="tabControlRef"/>
+    <tab-control v-if="showTabControl" class="tabs" :titles="names" @tabItemClick="tabClick" ref="tabControlRef" />
+
     <van-nav-bar title="房屋详情" left-text="旅途" left-arrow @click-left="onClickLeft" />
+
     <div class="main" v-if="mainPart" v-memo="[mainPart]">
       <detail-swipe :swipe-data="mainPart.topModule.housePicture.housePics" />
       <detail-infos name="描述" :ref="getSectionRef" :top-infos="mainPart.topModule" />
@@ -13,16 +15,17 @@
       <detail-map name="周边" :ref="getSectionRef" :position="mainPart.dynamicModule.positionModule" />
       <detail-intro :price-intro="mainPart.introductionModule" />
     </div>
+
     <div class="footer">
       <img src="@/assets/img/detail/icon_ensure.png" alt="">
-      <div class="text">弘源旅途, 永无止境!</div>
+      <div class="text">奈斯兔旅行, 永无止境!</div>
     </div>
 
   </div>
 </template>
 
 <script setup>
-import { ref, computed,watch } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { getDetailInfos } from "@/services"
 
@@ -35,6 +38,7 @@ import DetailComment from "./cpns/detail_05-comment.vue"
 import DetailNotice from "./cpns/detail_06-notice.vue"
 import DetailMap from "./cpns/detail_07-map.vue"
 import DetailIntro from "./cpns/detail_08-intro.vue"
+
 import useScroll from '@/hooks/useScroll'
 
 const router = useRouter()
@@ -70,7 +74,7 @@ const names = computed(() => {
   return Object.keys(sectionEls.value)
 })
 const getSectionRef = (value) => {
-  if(!value) return
+  if (!value) return
   const name = value.$el.getAttribute("name")
   sectionEls.value[name] = value.$el
 }
@@ -92,18 +96,18 @@ const tabClick = (index) => {
 }
 // 页面滚动，匹配顶部导航
 const tabControlRef = ref()
-watch(scrollTop,(newValue) => {
-  if(newValue === currentDistance){
+watch(scrollTop, (newValue) => {
+  if (newValue === currentDistance) {
     isClick = false
   }
-  if(isClick) return
+  if (isClick) return
   const els = Object.values(sectionEls.value)
   const valus = els.map(el => el.offsetTop)
   // 匹配索引
-  let index = valus.length-1
-  for(let i=0; i<valus.length; i++){
-    if(valus[i] > newValue + 44){
-      index = i-1
+  let index = valus.length - 1
+  for (let i = 0; i < valus.length; i++) {
+    if (valus[i] > newValue + 44) {
+      index = i - 1
       break
     }
   }

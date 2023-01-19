@@ -1,7 +1,7 @@
 import useMainStore from '@/stores/modules/main'
 import axios from 'axios'
-
 import { BASE_URL, TIMEOUT } from './config'
+
 const mainStore = useMainStore()
 // 网络请求库的封装
 class MYRequest {

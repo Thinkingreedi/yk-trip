@@ -6,9 +6,11 @@
     <HomeSwipe />
     <!-- 搜索 -->
     <HomeSearchBox />
+    <!-- 种类 -->
     <HomeCategories />
+    <!-- 搜索框 -->
     <div class="search-bar" v-if="isShowSearchBar">
-      <SearchBar :start-date="'09.21'" :end-date="'09.22'" />
+      <SearchBar :start-date="'01.01'" :end-date="'01.02'" />
     </div>
     <!-- 列表数据 -->
     <HomeContent />
@@ -47,11 +49,11 @@ homeStore.fetchHouseListData()
 // 监听达到底部
 // 监听滚动到底部
 const homeRef = ref()
-const { isReachBottom, scrollTop } = useScroll(homeRef)
-watch(isReachBottom, (newValue) => {
+const { isReachBotton, scrollTop } = useScroll(homeRef)
+watch(isReachBotton, (newValue) => {
   if (newValue) {
     homeStore.fetchHouseListData().then(() => {
-      isReachBottom.value = false
+      isReachBotton.value = false
     })
   }
 })

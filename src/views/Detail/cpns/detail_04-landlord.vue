@@ -69,6 +69,7 @@ defineProps({
 
     .left {
       display: flex;
+
       .avatar {
         img {
           width: 54px;
@@ -101,7 +102,7 @@ defineProps({
         padding: 0 12px;
         font-size: 12px;
         color: #fff;
-        background-image: linear-gradient(90deg,#fa8c1d,#fcaf3f);
+        background-image: linear-gradient(90deg, #fa8c1d, #fcaf3f);
       }
     }
   }
@@ -113,15 +114,18 @@ defineProps({
 
     .item {
       font-size: 12px;
+
       .title {
         color: #999;
       }
+
       .score {
         margin: 5px 0;
         font-size: 18px;
         font-weight: 700;
         color: #333;
       }
+
       .desc {
         color: #666;
       }

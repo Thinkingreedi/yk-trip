@@ -86,14 +86,12 @@ const cityStore = useCityStore()
 const { currentCity } = storeToRefs(cityStore)
 
 // 日期范围的处理
-// const nowDate = new Date()
-// const newDate = new Date()
-// newDate.setDate(nowDate.getDate() + 1)
 const mainStore = useMainStore()
 const { startDate, endDate } = storeToRefs(mainStore)
 
 const startDateStr = computed(() => formatMonthDay(startDate.value))
 const endDateStr = computed(() => formatMonthDay(endDate.value))
+
 const stayCount = ref(getDiffDays(startDate.value, endDate.value))
 
 const showCalendar = ref(false)

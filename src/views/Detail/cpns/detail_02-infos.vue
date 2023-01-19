@@ -1,16 +1,17 @@
 <template>
   <div class="infos">
+
     <div class="name">{{ topInfos.houseName }}</div>
+
     <div class="tags">
       <template v-for="(item, index) in topInfos.houseTags" :key="index">
-        <span 
-          class="item" 
-          v-if="item.tagText"
+        <span class="item" v-if="item.tagText"
           :style="{ color: item.tagText.color, background: item.tagText.background.color }">
           {{ item.tagText.text }}
         </span>
       </template>
     </div>
+
     <div class="comment extra">
       <div class="left">
         <span class="score">{{ topInfos.commentBrief.overall }}</span>
@@ -24,6 +25,7 @@
         </span>
       </div>
     </div>
+
     <div class="position extra">
       <div class="left address">
         {{ topInfos.nearByPosition.address }}

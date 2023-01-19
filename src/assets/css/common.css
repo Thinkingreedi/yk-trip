@@ -22,3 +22,14 @@ body {
   /* 在视口里进行滚动而不是页面进行滚动 */
   overflow-y: auto;
 }
+
+.bottom-gray-line {
+  border-bottom: 1px solid var(--line-color);
+}
+
+.icon-check {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url(../img/detail/icon_check.png) 0 0 / 100% 100%;
+}

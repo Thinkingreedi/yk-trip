@@ -24,8 +24,7 @@
         </div>
         <div class="tags">
           <template v-for="(item, index) in comment.commentTagVo" :key="index">
-            <span class="item" 
-                  :style="{ color: item.color, background: item.backgroundColor }">
+            <span class="item" :style="{ color: item.color, background: item.backgroundColor }">
               {{ item.text }}
             </span>
           </template>
@@ -154,6 +153,7 @@ defineProps({
 
       .profile {
         margin-left: 8px;
+
         .date {
           margin-top: 3px;
           font-size: 12px;

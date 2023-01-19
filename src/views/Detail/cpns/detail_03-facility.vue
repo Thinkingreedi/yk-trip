@@ -11,7 +11,7 @@
             <div class="list">
               <template v-for="(iten, indey) in item.facilitys.slice(0, 4)" :key="indey">
                 <div class="iten">
-                  <i class="icon_check icon"></i>
+                  <i class="icon-check icon"></i>
                   <span>{{ iten.name }}</span>
                 </div>
               </template>
@@ -62,7 +62,7 @@ defineProps({
     }
 
     .list {
-      flex: 1;
+      flex: 3;
       display: flex;
       flex-wrap: wrap;
       align-items: center;

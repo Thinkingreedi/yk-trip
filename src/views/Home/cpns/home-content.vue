@@ -20,6 +20,7 @@ import { useRouter } from 'vue-router';
 const homeStore = useHomeStore()
 const { houselist } = storeToRefs(homeStore)
 const router = useRouter()
+
 const itemClick = (item) => {
   // 跳转到详情页面
   router.push('/detail/' + item.houseId)
