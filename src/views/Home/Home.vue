@@ -17,11 +17,7 @@
     <!-- <button @click="moreBtnClick">加载更多</button> -->
   </div>
 </template>
-<script>
-export default {
-  name: 'home'
-}
-</script>
+
 <script setup>
 import { ref, watch, computed, onActivated } from 'vue'
 import HomeNavBar from './cpns/home-nav-bar.vue'

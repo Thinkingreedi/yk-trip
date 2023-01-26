@@ -3,8 +3,8 @@
     <h2 class="title">热门精选</h2>
     <div class="list">
       <template v-for="(item, index) in houselist" :key="item.data.houseId">
-        <HouseItemV9 v-if="item.discoveryContentType === 9" :item-data="item.data" @click="itemClick(item.data)" />
-        <HouseItemV3 v-else-if="item.discoveryContentType === 3" :item-data="item.data" @click="itemClick(item.data)" />
+        <HouseItemV9 v-if="item.discoveryContentType === 9" :item-data="item.data" @click="itemClick(item.data)" ></HouseItemV9>
+        <HouseItemV3 v-else-if="item.discoveryContentType === 3" :item-data="item.data" @click="itemClick(item.data)"></HouseItemV3>
       </template>
     </div>
   </div>
