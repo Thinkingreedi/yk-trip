@@ -15,7 +15,7 @@ import { computed } from "vue";
 const props = defineProps({
   itemData: {
     type: Object,
-    default: () => {},
+    default: () => { },
   },
 });
 

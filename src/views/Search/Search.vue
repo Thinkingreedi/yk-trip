@@ -5,7 +5,8 @@
         <template #title>
           <search-bar :title="routeQuery.address" :start-date="routeQuery.startDate" :end-date="routeQuery.endDate"
             :key-word="keyWord" :cancel-icon="showCancelIcon" @cancel-click="handleCancelClick"
-            @searchClick="handleSearchClick"></search-bar>
+            @searchClick="handleSearchClick">
+          </search-bar>
         </template>
       </nav-bar>
 
@@ -33,6 +34,7 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
+import { showToast } from 'vant';
 import NavBar from "@/components/nav-bar/index.vue";
 import SearchBar from "@/components/search-bar/search-bar.vue";
 import DropdownSelect from "@/components/dropdown-select/index.vue";
@@ -41,6 +43,8 @@ import SearchPanel from "./cpns/search-panel/index.vue";
 import SearchListItem from "@/components/search-list-item/index.vue";
 import { useRouter, useRoute } from "vue-router";
 import { getSearchHouse, getSearchConditions, getGuessulike } from "@/services";
+
+showToast('开发完善中...');
 
 const route = useRoute();
 const router = useRouter();

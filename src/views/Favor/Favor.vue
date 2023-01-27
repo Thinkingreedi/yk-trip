@@ -1,6 +1,6 @@
 <template>
   <div class="favor">
-    <nav-bar left-arrow left-text="旅途">
+    <nav-bar left-arrow left-text="首页">
       <template #title>
         <van-tabs v-model:active="active" type="card" shrink>
           <van-tab v-for="item in titles" :title="item"></van-tab>
@@ -23,11 +23,7 @@
             <div v-if="landlordlist.length" class="list"></div>
 
             <div v-else class="no-data">
-              <img
-                class="icon-no-data"
-                src="@/assets/img/favor/empty_favorite.44731802.png"
-                alt=""
-              />
+              <img class="icon-no-data" src="@/assets/img/favor/empty_favorite.44731802.png" alt="" />
               <div class="name">暂无收藏</div>
               <div class="desp">
                 点击
@@ -56,8 +52,12 @@
 import NavBar from "@/components/nav-bar/index.vue";
 import SearchListItem from "@/components/search-list-item/index.vue";
 import { ref } from "vue";
+import { showToast } from 'vant';
 import { getFavorList, getHistoryList } from "@/services";
 import { useRouter } from "vue-router";
+
+showToast('开发完善中...');
+
 const router = useRouter();
 const titles = ["我的收藏", "浏览历史"];
 const active = ref(0);
@@ -82,20 +82,24 @@ const handleBtnClick = () => {
 <style scoped lang="less">
 .content {
   padding: 10px 20px 55px 20px;
+
   .no-data {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     .icon-no-data {
       width: 100%;
     }
+
     .name {
       color: #333;
       font-size: 18px;
       font-weight: 500;
       line-height: 27px;
     }
+
     .desp {
       color: #666;
       line-height: 18px;
@@ -108,6 +112,7 @@ const handleBtnClick = () => {
         width: 12px;
       }
     }
+
     .btn {
       padding: 0 38px;
       height: 40px;

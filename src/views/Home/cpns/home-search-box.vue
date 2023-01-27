@@ -71,6 +71,7 @@ const cityClick = () => {
 // 位置城市点击处理
 const positionClick = () => {
   navigator.geolocation.getCurrentPosition((res) => {
+    router.push('/city')
     console.log('获取位置成功', res);
   }, err => {
     console.log('获取位置失败', err);

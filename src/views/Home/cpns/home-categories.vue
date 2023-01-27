@@ -1,5 +1,5 @@
 <template>
-  <div class="categories">
+  <div class="categories" @click="handleBtnClick">
     <template v-for="(item, index) in categories" :key="item.id">
       <div class="item">
         <img :src="item.pictureUrl" alt="" srcset="">
@@ -14,6 +14,11 @@ import useHomeStore from '@/stores/modules/home';
 import { storeToRefs } from 'pinia';
 const homeStore = useHomeStore()
 const { categories } = storeToRefs(homeStore)
+
+//跳转搜索页面
+const handleBtnClick = () => {
+  router.push('/search')
+}
 </script>
 
 <style lang="less" scoped>

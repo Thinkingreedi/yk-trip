@@ -2,48 +2,26 @@
   <van-dropdown-menu>
     <template v-for="(item, index) in itemsData">
       <!-- 自定义 -->
-      <van-dropdown-item
-        v-if="item.gType === 2"
-        title="位置"
-        :ref="dropdownItemRefs"
-      >
+      <van-dropdown-item v-if="item.gType === 2" title="位置" :ref="dropdownItemRefs">
         <div class="dropdown-bar-panel-content">
-          <side-bar
-            class="top"
-            :menuData="item.subGroups"
-            @item-click="handleSideSubItemClick"
-          ></side-bar>
-          <view-house-btns
-            class="bottom"
-            @clear="handleClearClick('位置')"
-            @view-click="handleViewClick('位置')"
-          ></view-house-btns>
+          <side-bar class="top" :menuData="item.subGroups" @item-click="handleSideSubItemClick"></side-bar>
+          <view-house-btns class="bottom" @clear="handleClearClick('位置')"
+            @view-click="handleViewClick('位置')"></view-house-btns>
         </div>
       </van-dropdown-item>
 
-      <van-dropdown-item
-        v-if="item.gType === 4"
-        v-model="value"
-        :options="options"
-      />
+      <van-dropdown-item v-if="item.gType === 4" v-model="value" :options="options" />
 
       <!-- 自定义 -->
-      <van-dropdown-item
-        v-if="item.gType === 1"
-        title="筛选"
-        :ref="dropdownItemRefs"
-      >
+      <van-dropdown-item v-if="item.gType === 1" title="筛选" :ref="dropdownItemRefs">
         <div class="dropdown-bar-panel-content">
           <side-bar class="top" :menuData="item.subGroups">
             <template #content="slotProps">
-              <p class="list-content">正在开发中....</p>
+              <p class="list-content">正在开发中...</p>
             </template>
           </side-bar>
-          <view-house-btns
-            class="bottom"
-            @clear="handleClearClick('筛选')"
-            @view-click="handleViewClick('筛选')"
-          ></view-house-btns>
+          <view-house-btns class="bottom" @clear="handleClearClick('筛选')"
+            @view-click="handleViewClick('筛选')"></view-house-btns>
         </div>
       </van-dropdown-item>
     </template>
@@ -94,12 +72,14 @@ const handleSideSubItemClick = (item) => {
 
 <style scoped lang="less">
 @popupHeight: 500px;
+
 // 重写Vant样式
 :global(.van-dropdown-menu .van-popup .van-sidebar-item) {
   padding-left: 20px;
   padding-top: 14px;
   padding-bottom: 14px;
 }
+
 :global(.van-dropdown-menu .van-popup .van-sidebar-item::before) {
   border-radius: 50%;
   left: 8px;

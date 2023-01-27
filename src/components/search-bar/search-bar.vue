@@ -39,6 +39,7 @@ const endDateStr = computed(() => formatMonthDay(endDate.value, "MM.DD"))
 
   height: 45px;
   line-height: 45px;
+  width: 350px;
 
   padding: 0 10px;
   font-size: 14px;
@@ -108,7 +109,7 @@ const endDateStr = computed(() => formatMonthDay(endDate.value, "MM.DD"))
     border-left: 1px solid #fff;
 
     .keyword {
-      max-width: 155px;
+      max-width: 120px;
       font-size: 12px;
     }
 
@@ -128,6 +129,8 @@ const endDateStr = computed(() => formatMonthDay(endDate.value, "MM.DD"))
   .right {
     display: flex;
     align-items: center;
+    position: relative;
+    left: -10px;
   }
 
   .icon-search {

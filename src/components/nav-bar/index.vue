@@ -13,7 +13,7 @@
     </template>
     <template #right>
       <slot name="right">
-        <i class="icon-right-menu"></i>
+        <!-- <i class="icon-right-menu"></i> -->
       </slot>
     </template>
   </van-nav-bar>
@@ -48,16 +48,18 @@ const handleLeftClick = () => {
   width: 8px;
   height: 15px;
 }
+
 .left-text {
   color: var(--primary-color);
   margin-left: 8px;
   font-weight: 700;
 }
-.icon-right-menu {
-  display: inline-block;
-  width: 20px;
-  height: 15px;
-  background-image: url(../../assets/img/home/icon-right-menu.png);
-  background-size: 20px 15px;
-}
+
+// .icon-right-menu {
+//   display: inline-block;
+//   width: 20px;
+//   height: 15px;
+//   background-image: url(../../assets/img/home/icon-right-menu.png);
+//   background-size: 20px 15px;
+// }
 </style>

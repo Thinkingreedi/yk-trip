@@ -2,7 +2,7 @@
   <div class="swipe">
     <van-swipe class="my-swipe banner" :autoplay="3000" indicator-color="white">
       <van-swipe-item>
-        <img src="@/assets/img/home/banner.webp" alt="" srcset="" />
+        <img src="@/assets/img/home/banner.jpg" alt="" srcset="" />
       </van-swipe-item>
       <van-swipe-item>
         <img src="@/assets/img/home/banner1.jpg" alt="" srcset="" />
