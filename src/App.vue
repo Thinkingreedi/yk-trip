@@ -14,9 +14,10 @@
 </template>
 
 <script setup>
-import TabBar from  '@/components/tabbar/tabbar.vue'
+import TabBar from '@/components/tabbar/tabbar.vue'
 import Loading from '@/components/loading/loading.vue'
 import { useRoute } from 'vue-router';
+
 const route = useRoute()
 </script>
 

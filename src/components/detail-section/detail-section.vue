@@ -1,5 +1,5 @@
 <template>
-  <div class="section">
+  <div class="detail-section">
     <div class="header">
       <h2 class="title">{{ title }}</h2>
     </div>
@@ -34,15 +34,15 @@ defineProps({
 </script>
 
 <style lang="less" scoped>
-.section {
+.detail-section {
   padding: 0 15px;
   margin-top: 12px;
   border-top: 5px solid #f2f3f4;
   background-color: #fff;
 
   .header {
-    height: 50px;
-    line-height: 50px;
+    // height: 50px;
+    // line-height: 50px;
     border-bottom: 1px solid #eee;
 
     .title {
@@ -59,8 +59,8 @@ defineProps({
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 44px;
-    line-height: 44px;
+    // height: 44px;
+    // line-height: 44px;
     color: #ff9645;
     font-size: 14px;
     font-weight: 600;

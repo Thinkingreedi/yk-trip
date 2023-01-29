@@ -33,16 +33,7 @@ const homeStore = useHomeStore()
 homeStore.fetchHotSuggestData()
 homeStore.fetchCategoriesData()
 homeStore.fetchHouseListData()
-// 模拟加载更多
-// const moreBtnClick = () =>{
-//     console.log('加载更多');
-//     homeStore.fetchHouseListData()
-// }
-// useScroll(()=>{
-//     homeStore.fetchHouseListData()
-// })
-// 监听滚动到底部
-// 监听达到底部
+
 // 监听滚动到底部
 const homeRef = ref()
 const { isReachBotton, scrollTop } = useScroll(homeRef)
@@ -53,13 +44,7 @@ watch(isReachBotton, (newValue) => {
     })
   }
 })
-// 监听页面的滚动
-// 加载更多
 // 搜索框显示控制
-// const isShowSearchBar = ref(false)
-// watch(scrollTop,(newTop)=>{
-//     isShowSearchBar.value = newTop>100
-// })
 const isShowSearchBar = computed(() => {
   return scrollTop.value >= 350
 })
