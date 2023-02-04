@@ -1,29 +1,74 @@
-# trip
+# Vue3 + Pinia + Vite 开发奈斯兔旅行民宿移动端
 
-This template should help get you started developing with Vue 3 in Vite.
+## 项目简介
 
-## Recommended IDE Setup
+- 奈斯兔旅行是一个民宿类的移动端网站，可以通过移动端页面进行房源信息的查看和浏览，以及房屋预定等操作，该项目已成功部署上线。
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- 项目体验地址：[项目地址](http://47.115.231.18)
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## 1、环境准备
 
-## Project Setup
+- 工具安装和环境搭建(vscode,node.js,npm),并做好相关配置。
 
-```sh
+## 2、项目启动
+
+- star 本项目，并 clone 项目到本地
+
+```
+git clone git@github.com:Thinkingreedi/yk-trip.git
+```
+
+- 进入项目目录
+
+```
+cd yk-trip
+```
+
+- 安装依赖
+
+```
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+- 启动服务
 
-```sh
+```
 npm run dev
 ```
 
-### Compile and Minify for Production
+- 点击链接即可访问网站~
 
-```sh
-npm run build
-```
+## 3、项目截图
+
+- 首页
+
+![](https://cdn.jsdelivr.net/gh/Thinkingreedi/myblog@main/img/20230204193349.png)
+
+- 位置选择
+
+![](https://cdn.jsdelivr.net/gh/Thinkingreedi/myblog@main/img/20230204193322.png)
+
+- 搜搜
+
+![](https://cdn.jsdelivr.net/gh/Thinkingreedi/myblog@main/img/20230204193433.png)
+
+- 热门精选
+
+![](https://cdn.jsdelivr.net/gh/Thinkingreedi/myblog@main/img/20230204193450.png)
+
+- 房屋详情 1
+
+![](https://cdn.jsdelivr.net/gh/Thinkingreedi/myblog@main/img/20230204193518.png)
+
+- 房屋详情2
+
+![](https://cdn.jsdelivr.net/gh/Thinkingreedi/myblog@main/img/20230204193538.png)
+
+- 收藏
+
+![](https://cdn.jsdelivr.net/gh/Thinkingreedi/myblog@main/img/20230204193642.png)
+
+- 消息
+
+![](https://cdn.jsdelivr.net/gh/Thinkingreedi/myblog@main/img/20230204193609.png)
