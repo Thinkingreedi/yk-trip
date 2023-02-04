@@ -41,34 +41,34 @@ npm run dev
 
 ## 3、项目截图
 
-- 首页
+- 首页：
 
 ![](https://cdn.jsdelivr.net/gh/Thinkingreedi/myblog@main/img/20230204193349.png)
 
-- 位置选择
+- 位置选择：
 
 ![](https://cdn.jsdelivr.net/gh/Thinkingreedi/myblog@main/img/20230204193322.png)
 
-- 搜搜
+- 搜索：
 
 ![](https://cdn.jsdelivr.net/gh/Thinkingreedi/myblog@main/img/20230204193433.png)
 
-- 热门精选
+- 热门精选：
 
 ![](https://cdn.jsdelivr.net/gh/Thinkingreedi/myblog@main/img/20230204193450.png)
 
-- 房屋详情 1
+- 房屋详情 1：
 
 ![](https://cdn.jsdelivr.net/gh/Thinkingreedi/myblog@main/img/20230204193518.png)
 
-- 房屋详情2
+- 房屋详情2：
 
 ![](https://cdn.jsdelivr.net/gh/Thinkingreedi/myblog@main/img/20230204193538.png)
 
-- 收藏
+- 收藏：
 
 ![](https://cdn.jsdelivr.net/gh/Thinkingreedi/myblog@main/img/20230204193642.png)
 
-- 消息
+- 消息：
 
 ![](https://cdn.jsdelivr.net/gh/Thinkingreedi/myblog@main/img/20230204193609.png)
