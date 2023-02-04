@@ -12,13 +12,15 @@
 <script setup>
 import useHomeStore from '@/stores/modules/home';
 import { storeToRefs } from 'pinia';
+import { useRouter } from 'vue-router'
 const homeStore = useHomeStore()
 const { categories } = storeToRefs(homeStore)
-
+const router = useRouter()
 //跳转搜索页面
 const handleBtnClick = () => {
   router.push('/search')
 }
+
 </script>
 
 <style lang="less" scoped>
